@@ -5,7 +5,7 @@
  */
 package com.ceep.juegos.dominio;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -16,10 +16,17 @@ public class Juego {
     private String nombre;
     private int unidadesVendidas;
     private double precioUnidad;
-    private Date fechaSalida;//objeto https://www.discoduroderoer.es/clase-date-de-java/
+    private LocalDate fechaSalida;//objeto año-mes -dia
     
     //constructor
     public Juego() {
+    }
+
+    public Juego(String nombre, int unidadesVendidas, double precioUnidad, LocalDate fechaSalida) {
+        this.nombre = nombre;
+        this.unidadesVendidas = unidadesVendidas;
+        this.precioUnidad = precioUnidad;
+        this.fechaSalida = fechaSalida;
     }
     
     //getter and setter
@@ -47,11 +54,11 @@ public class Juego {
         this.precioUnidad = precioUnidad;
     }
 
-    public Date getFechaSalida() {
+    public LocalDate getFechaSalida() {
         return fechaSalida;
     }
 
-    public void setFechaSalida(Date fechaSalida) {
+    public void setFechaSalida(LocalDate fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
     
