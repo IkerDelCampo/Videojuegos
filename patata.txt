@@ -1,25 +1,3 @@
-try {
-            //inicio mi fichero
-            BufferedReader lector = new  BufferedReader/*agrupa los caracteres*/(new FileReader(fichero)/*lee los caracteres*/);
-            //empiezo a leer la primera linea
-            String linea = lector.readLine();
-            String nombre;
-            int ventas;
-            double precio;
-            LocalDate salida;
-            while (linea != null) {
-                if (linea.contains(nombreContenido)) {
-                    String contenidoLinea[] = linea.split(";");
-                    nombre = contenidoLinea[0];
-                    ventas = Integer.parseInt(contenidoLinea[1]);
-                    precio = Double.parseDouble(contenidoLinea[2]);
-                    salida = LocalDate.parse(contenidoLinea[3]);
-                }
-                linea = lector.readLine();
-            }
-            return new Juego(nombre,ventas,precio,salida);
-        } catch (FileNotFoundException e) {
-            throw new LecturaDatosEx("No se encontró el archivo");
-        } catch (IOException ex) {
-            throw new LecturaDatosEx("Ocurrió un error al leer el archivo");
-        }
+lol;2;2000.0;2012-11-20
+lel;2;2000.0;2012-11-20
+oky;2;2000.0;2012-11-20
