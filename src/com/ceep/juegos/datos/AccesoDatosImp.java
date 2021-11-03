@@ -14,13 +14,13 @@ import java.util.List;
 
 public class AccesoDatosImp implements IAccesoDatos{
 
-    @Override
+    @Override//addJuego
     public boolean existeFichero(String nombreFichero) throws AccesoDatosEx {
         File fichero = new File(nombreFichero);
         return fichero.exists();
     }
 
-    @Override
+    @Override//addJuego
     public void addContenido(String nombreFichero, Juego juego, boolean anexar) throws EscrituraDatosEx {
         File fichero = new File(nombreFichero);
         try {
@@ -93,7 +93,7 @@ public class AccesoDatosImp implements IAccesoDatos{
     }
 
     @Override
-    public Juego cogerContenido(String nombreFichero, String nombreContenido) throws LecturaDatosEx {
+    public Juego cogerContenido(String nombreFichero, String contenido) throws LecturaDatosEx {
         File fichero = new File(nombreFichero);
         try {
             //inicio mi fichero
@@ -101,7 +101,7 @@ public class AccesoDatosImp implements IAccesoDatos{
             //empiezo a leer la primera linea
             String linea = lector.readLine();
             while (linea != null) {
-                if (linea.contains(nombreContenido)) {
+                if (linea.contains(contenido)) {
                     /*String contenidoLinea[] = linea.split(";");
                     String nombre = contenidoLinea[0];
                     int ventas = Integer.parseInt(contenidoLinea[1]);

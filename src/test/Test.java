@@ -16,7 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Test {
-    public static void main(String[] args) throws IOException, EscrituraDatosEx, LecturaDatosEx {
+    //public static void main(String[] args) throws IOException, EscrituraDatosEx, LecturaDatosEx {
         String nombreArchivo= "patata.txt";
         File patata =new File(nombreArchivo);
         Juego j1 = new Juego("lol", 2, 2000, LocalDate.parse("2012-11-20"));
@@ -29,7 +29,8 @@ public class Test {
         /*Juego prueva = ac.cogerContenido(nombreArchivo, "lol");
         System.out.println(prueva.toString());*/
         //ac.deleteContenido(nombreArchivo, j2); //Borrar un objeto
-        System.out.println(ac.listar(nombreArchivo));
-        
-    }
+        //System.out.println(ac.listar(nombreArchivo));
+        //System.out.println(ac.cogerContenido(nombreArchivo, "manzana;3;3000.0;2013-11-23"));
+        //System.out.println(ac.buscarContenido(nombreArchivo, "manzana;3;3000.0;2013-11-23"));
+    //}
 }
